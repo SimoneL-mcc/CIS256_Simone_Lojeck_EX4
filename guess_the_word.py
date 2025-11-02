@@ -36,7 +36,7 @@ def process_guess(word, index, guess, num_guesses):
             print(f"\n\n ***  GAME OVER....You are out of guesses. The ship was '{word}'")
             endgame = True # end game
 
-    return index, num_guesses, endgame
+    return index, endgame
 
 # Define word list
 words = ['Enterprise', 'Columbia', 'Challenger', 'Discovery',
@@ -67,7 +67,7 @@ while num_guesses > 0:
     guess = input(f"\nGuess the letter of the word: ").lower()
 
     # Process the guess
-    index, num_guesses, endgame = process_guess(word, index, guess, num_guesses)
+    index, endgame = process_guess(word, index, guess, num_guesses)
 
     # Break while loop if game is over
     if endgame:
